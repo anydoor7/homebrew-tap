@@ -1,14 +1,18 @@
 # homebrew-tap
 
-Homebrew tap for [TSLink](https://github.com/anydoor7/tslink), a Tailscale-backed gateway that gives any local service its own tailnet hostname with one command.
+Homebrew tap for [TSLink](https://github.com/anydoor7/tslink): private addresses for your apps, on your Tailscale network.
 
 ## Install
+
+On macOS or Linux:
 
 ```bash
 brew install --cask anydoor7/tap/tslink
 ```
 
-The cask installs the `tslink` binary, which is Developer ID signed and notarized by Apple, so Gatekeeper runs it without any extra step. Homebrew casks are macOS-only; on Linux use the `.deb` / `.rpm` / `.tar.gz` assets from the [releases page](https://github.com/anydoor7/tslink/releases) or `go install github.com/anydoor7/tslink@latest`.
+Upgrade with `brew upgrade --cask tslink`, then run `tslink install` again if TSLink runs as a background service. On macOS the binary is Developer ID signed and notarized by Apple, so Gatekeeper runs it without any extra step.
+
+Windows, `.deb` and `.rpm` downloads, and building from source are covered in [Getting started](https://github.com/anydoor7/tslink/blob/main/docs/getting-started.md). To check a download, see [verify a release](https://github.com/anydoor7/tslink/blob/main/docs/verify-release.md).
 
 ## How this tap is maintained
 
